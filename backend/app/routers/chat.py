@@ -32,9 +32,9 @@ class ChatResponse(BaseModel):
 @router.post("/query", response_model=ChatResponse)
 async def chat_query(request: ChatRequest):
     """
-    Main chat endpoint for RAG queries
-    
-    Supports:
+    Main chat endpoint for RAG queries.
+    Note: This is a public education tool, so no user authentication is currently enforced.
+    """
     - General questions about the textbook
     - Text selection-based queries
     - Context-aware responses based on current module/chapter
