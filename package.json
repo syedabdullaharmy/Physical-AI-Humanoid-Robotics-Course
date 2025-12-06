@@ -6,7 +6,7 @@
   "scripts": {
     "docusaurus": "cd frontend && npx docusaurus",
     "start": "cd frontend && npx docusaurus start",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm install && npm run build && cd .. && mkdir -p public && cp -r frontend/build/* public/",
     "deploy": "cd frontend && npx docusaurus deploy",
     "clear": "cd frontend && npx docusaurus clear",
     "serve": "cd frontend && npx docusaurus serve",
