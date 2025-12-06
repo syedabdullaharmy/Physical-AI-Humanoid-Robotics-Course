@@ -1,30 +1,131 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* Physical AI & Humanoid Robotics Premium Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Premium Color Palette */
+  --ifm-color-primary: #ec4899;
+  /* Pink-500 */
+  --ifm-color-primary-dark: #db2777;
+  --ifm-color-primary-darker: #be185d;
+  --ifm-color-primary-darkest: #831843;
+  --ifm-color-primary-light: #f472b6;
+  --ifm-color-primary-lighter: #f9a8d4;
+  --ifm-color-primary-lightest: #fbcfe8;
+
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #f8fafc;
+
+  --doc-sidebar-width: 280px;
+  --ifm-navbar-height: 4rem;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #f472b6;
+  /* Pink-400 */
+  --ifm-color-primary-dark: #ec4899;
+  --ifm-color-primary-darker: #db2777;
+  --ifm-color-primary-darkest: #be185d;
+  --ifm-color-primary-light: #f9a8d4;
+  --ifm-color-primary-lighter: #fbcfe8;
+  --ifm-color-primary-lightest: #fce7f3;
+
+  --ifm-background-color: #0f172a;
+  /* Slate-900 */
+  --ifm-background-surface-color: #1e293b;
+  /* Slate-800 */
+}
+
+/* Typography & Layout */
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+/* Navbar Premium Look */
+.navbar {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: rgba(15, 23, 42, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar__title {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom right, var(--ifm-background-surface-color), var(--ifm-background-color));
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  color: var(--ifm-color-gray-600);
+  margin-bottom: 2rem;
+}
+
+/* Cards & Content */
+.card {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  background: var(--ifm-background-surface-color);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Code Blocks */
+.theme-code-block {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Gradients */
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, #be185d 100%);
+  border: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.button--primary:hover {
+  opacity: 0.9;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, #be185d 100%);
 }

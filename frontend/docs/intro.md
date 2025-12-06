@@ -1,116 +1,69 @@
 ---
 sidebar_position: 1
-title: Introduction
+title: Welcome to Physical AI
+slug: /
 ---
 
 # Physical AI & Humanoid Robotics
 
-Welcome to the comprehensive textbook on **Physical AI and Humanoid Robotics**! This course will take you from fundamentals to advanced concepts in building autonomous humanoid robots.
+<div className="hero shadow--md" style={{background: 'linear-gradient(to right, #ec4899, #8b5cf6)', borderRadius: '1rem', color: 'white', marginBottom: '2rem'}}>
+  <div className="container">
+    <h1 className="hero__title">The Future is Embodied</h1>
+    <p className="hero__subtitle">
+      A comprehensive 13-week curriculum bridging the gap between digital intelligence and physical reality.
+    </p>
+    <div>
+      <a className="button button--secondary button--lg" href="/docs/setup">Get Started →</a>
+    </div>
+  </div>
+</div>
 
-## What You'll Learn
+## 📚 What You Will Learn
 
-This 13-week course covers:
+This textbook is designed to take you from the basics of Robot Operating System (ROS 2) to deploying cutting-edge Vision-Language-Action (VLA) models on humanoid robots.
 
-- **ROS 2 Fundamentals** (Weeks 3-5): Master the Robot Operating System 2
-- **Digital Twin & Simulation** (Weeks 6-7): Create virtual robots with Gazebo and Unity
-- **NVIDIA Isaac Sim** (Weeks 8-10): GPU-accelerated simulation and synthetic data generation
-- **Vision-Language-Action Models** (Weeks 11-13): Multimodal AI for humanoid control
+<div className="row" style={{marginTop: '2rem'}}>
+  <div className="col col--4">
+    <div className="card padding--md h-100">
+      <h3>🤖 ROS 2 & Simulation</h3>
+      <p>Master the industry-standard middleware and simulate complex robots in Gazebo and Isaac Sim.</p>
+    </div>
+  </div>
+  <div className="col col--4">
+    <div className="card padding--md h-100">
+      <h3>🌐 Digital Twins</h3>
+      <p>Create high-fidelity digital replicas of physical environments to train safe and robust agents.</p>
+    </div>
+  </div>
+  <div className="col col--4">
+    <div className="card padding--md h-100">
+      <h3>🧠 VLA Models</h3>
+      <p>Deploy multimodal AI models that can see, reason, and act in the physical world.</p>
+    </div>
+  </div>
+</div>
 
-## Who This Course Is For
+## 🚀 Course Roadmap
 
-This textbook is designed for:
+| Module | Topic | Key Technologies |
+| :--- | :--- | :--- |
+| **01** | Foundations of Physical AI | ROS 2, Python, Linux |
+| **02** | Simulation & Digital Twins | Gazebo, URDF, Sensors |
+| **03** | NVIDIA Isaac Sim | USD, Omniverse, Isaac Lab |
+| **04** | Vision-Language-Action | PaliGemma, RT-2, Transformers |
+| **05** | Humanoid Locomotion | Reinforcement Learning, Sim2Real |
+| **06** | Manipulation & Grasping | MoveIt 2, GraspNet |
+| **07** | Deployment & Edge AI | Jetson Orin, Docker, MicroROS |
 
-- Industry practitioners with Python programming knowledge
-- Students transitioning into robotics and embodied AI
-- Self-learners exploring Physical AI concepts
-- Engineers building autonomous systems
+## 💡 How to Use This Textbook
 
-## Prerequisites
+1.  **Follow the Sequence:** The modules are built to be sequential. Start with Module 1 if you are new to ROS.
+2.  **Use the AI Assistant:** The chatbot in the bottom-right corner is trained on this exact content. Ask it to explain code or concepts!
+3.  **Hands-on Labs:** Every chapter ends with a practical lab. **Do not skip these.** Physical AI is a contact sport.
 
-- **Programming**: Python fundamentals (variables, functions, classes)
-- **Math**: Basic linear algebra and calculus
-- **Hardware**: One of three hardware paths (see Setup Guide)
-
-## Hardware Paths
-
-Choose one configuration:
-
-### 1. Digital Twin Workstation 💻
-- RTX 3060+ GPU
-- Ubuntu 22.04
-- 16GB+ RAM
-- Best for: Simulation-focused learning
-
-### 2. Physical AI Edge Kit 🤖
-- NVIDIA Jetson Orin Nano
-- Edge deployment focus
-- Best for: Real robot applications
-
-### 3. Cloud-Native ☁️
-- AWS/Azure GPU instances
-- Scalable compute
-- Best for: Flexibility and experimentation
-
-## Course Structure
-
-### Weeks 1-2: Foundation
-- Introduction to Physical AI
-- Hardware setup
-- Development environment
-
-### Weeks 3-5: ROS 2
-- ROS 2 architecture
-- Nodes, topics, services
-- Robot simulation basics
-
-### Weeks 6-7: Digital Twin
-- Gazebo simulation
-- Unity integration
-- Sim-to-real transfer
-
-### Weeks 8-10: NVIDIA Isaac Sim
-- GPU-accelerated simulation
-- Synthetic data generation
-- Advanced physics
-
-### Weeks 11-13: VLA Models
-- Vision-Language-Action models
-- Multimodal AI
-- Humanoid robot control
-
-### Week 14: Capstone
-- Integration project
-- Real-world application
-
-## How to Use This Textbook
-
-1. **Read Sequentially**: Chapters build on previous knowledge
-2. **Practice Code**: All examples are runnable - try them!
-3. **Ask the AI**: Use the chatbot for questions (bottom-right corner)
-4. **Personalize**: Click "Personalize" at chapter start for adapted content
-5. **Translate**: Click "اردو میں پڑھیں" for Urdu translation
-
-## Interactive Features
-
-### 🤖 AI Chatbot
-- Ask questions about any topic
-- Get instant, context-aware answers
-- Highlight text and ask "What does this mean?"
-
-### ✨ Personalization
-- Content adapted to your background
-- Customized explanations
-- Relevant examples for your hardware
-
-### 🌐 Urdu Translation
-- Full course available in Urdu
-- Technical terms preserved
-- Natural, readable translations
-
-## Getting Started
-
-Ready to begin? Head to the [Setup Guide](/docs/setup) to configure your environment!
+> **"The body is the interface between the mind and the world."**
 
 ---
 
-**Note**: This is an AI-native textbook. Use the chatbot liberally - it's here to help you learn!
+### Ready to build the future?
+[**Start Module 1: Introduction to ROS 2**](/docs/module-1-ros2/introduction)
