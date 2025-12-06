@@ -15,10 +15,11 @@ const config: Config = {
   },
 
   // Set the production url of your site here
+  // Set the production url of your site here
   url: 'https://syedabdullaharmy.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotics-Course/',
+  baseUrl: process.env.GITHUB_ACTIONS ? '/Physical-AI-Humanoid-Robotics-Course/' : '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
