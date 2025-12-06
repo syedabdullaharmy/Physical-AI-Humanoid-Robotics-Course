@@ -1,0 +1,44 @@
+
+Currently stored credentials:
+
+    Target: MicrosoftAccount:target=SSO_POP_User:user=syedabdullaharmy@gmail.com
+    Type: Generic 
+    User: syedabdullaharmy@gmail.com
+    Saved for this logon only
+    
+    Target: MicrosoftAccount:target=SSO_POP_Device
+    Type: Generic 
+    User: 02nbukizlxsegiti
+    Saved for this logon only
+    
+    Target: LegacyGeneric:target=MicrosoftAccount:user=syedabdullaharmy@gmail.com
+    Type: Generic 
+    User: syedabdullaharmy@gmail.com
+    Local machine persistence
+    
+    Target: LegacyGeneric:target=JianyingPro Cached Credential
+    Type: Generic 
+    User: JianyingPro
+    Local machine persistence
+    
+    Target: WindowsLive:target=virtualapp/didlogical
+    Type: Generic 
+    User: 02nbukizlxsegiti
+    Local machine persistence
+    
+    Target: LegacyGeneric:target=Skype for Desktop MSAv2/live:.cid.f2c354bc5742be61
+    Type: Generic 
+    User: live:.cid.f2c354bc5742be61
+    
+    Target: LegacyGeneric:target=MSIX-Skype for Desktop/live:.cid.f2c354bc5742be61
+    Type: Generic 
+    User: live:.cid.f2c354bc5742be61
+    
+    Target: LegacyGeneric:target=MSIX-Skype for Desktop MSAv2/live:.cid.f2c354bc5742be61
+    Type: Generic 
+    User: live:.cid.f2c354bc5742be61
+    
+    Target: LegacyGeneric:target=Skype for Desktop/live:.cid.f2c354bc5742be61
+    Type: Generic 
+    User: live:.cid.f2c354bc5742be61
+    
