@@ -1,0 +1,234 @@
+.chatWidget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: inherit;
+}
+
+.toggleButton {
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+  font-weight: bold;
+}
+
+.toggleButton:hover {
+  transform: scale(1.05);
+}
+
+.chatWindow {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  width: 350px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.header {
+  padding: 12px;
+  background: var(--ifm-color-primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.header button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--ifm-background-color);
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 85%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--ifm-color-primary);
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.bot {
+  align-self: flex-start;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
+  border-bottom-left-radius: 2px;
+}
+
+.contextQuote {
+  font-size: 0.75rem;
+  margin-top: 5px;
+  opacity: 0.8;
+  font-style: italic;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  padding-left: 5px;
+}
+
+.selectionPreview {
+  background: var(--ifm-color-warning-contrast-background);
+  color: var(--ifm-color-warning-contrast-foreground);
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputArea {
+  padding: 10px;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  display: flex;
+  gap: 5px;
+  background: var(--ifm-background-surface-color);
+}
+
+.inputArea input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 20px;
+  outline: none;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.inputArea button {
+  padding: 6px 12px;
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.inputArea button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.welcomeMessage {
+  padding: 15px;
+  background: var(--ifm-color-primary-lightest);
+  border-radius: 8px;
+  color: var(--ifm-font-color-base);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.errorMessage {
+  border-left: 3px solid var(--ifm-color-danger);
+  background: var(--ifm-color-danger-contrast-background) !important;
+}
+
+.messageContent {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Typing indicator animation */
+.typingIndicator {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 8px;
+}
+
+.typingIndicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  animation: typing 1.4s infinite;
+}
+
+.typingIndicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingIndicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+/* Smooth scrollbar */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-emphasis-400);
+  border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-emphasis-600);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chatWindow {
+    width: calc(100vw - 40px);
+    max-width: 350px;
+  }
+}
