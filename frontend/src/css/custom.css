@@ -3,45 +3,67 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Premium Color Palette */
-  --ifm-color-primary: #ec4899;
-  /* Pink-500 */
-  --ifm-color-primary-dark: #db2777;
-  --ifm-color-primary-darker: #be185d;
-  --ifm-color-primary-darkest: #831843;
-  --ifm-color-primary-light: #f472b6;
-  --ifm-color-primary-lighter: #f9a8d4;
-  --ifm-color-primary-lightest: #fbcfe8;
+  /* Modern Blue Color Palette - Matching ChatWidget */
+  --primary-blue: #0066FF;
+  --primary-cyan: #00C4FF;
+  --accent-purple: #7C3AED;
 
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-color-primary: var(--primary-blue);
+  --ifm-color-primary-dark: #0052CC;
+  --ifm-color-primary-darker: #0047B3;
+  --ifm-color-primary-darkest: #003380;
+  --ifm-color-primary-light: #1A75FF;
+  --ifm-color-primary-lighter: #4D94FF;
+  --ifm-color-primary-lightest: var(--primary-cyan);
 
+  /* Fonts */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', monospace;
+  --ifm-line-height-base: 1.6;
+
+  /* Backgrounds */
   --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #f8fafc;
+  --ifm-background-surface-color: #f9fafb;
 
+  /* Layout */
   --doc-sidebar-width: 280px;
   --ifm-navbar-height: 4rem;
+
+  /* Smooth transitions */
+  --ifm-transition-fast: 150ms;
+  --ifm-transition-slow: 300ms;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #f472b6;
-  /* Pink-400 */
-  --ifm-color-primary-dark: #ec4899;
-  --ifm-color-primary-darker: #db2777;
-  --ifm-color-primary-darkest: #be185d;
-  --ifm-color-primary-light: #f9a8d4;
-  --ifm-color-primary-lighter: #fbcfe8;
-  --ifm-color-primary-lightest: #fce7f3;
+  --ifm-color-primary: var(--primary-cyan);
+  --ifm-color-primary-dark: #00B3E6;
+  --ifm-color-primary-darker: #00A3D6;
+  --ifm-color-primary-darkest: #0085B3;
+  --ifm-color-primary-light: #1ACDFF;
+  --ifm-color-primary-lighter: #4DD9FF;
+  --ifm-color-primary-lightest: #80E5FF;
 
-  --ifm-background-color: #0f172a;
-  /* Slate-900 */
-  --ifm-background-surface-color: #1e293b;
-  /* Slate-800 */
+  --ifm-background-color: #1a1a1a;
+  --ifm-background-surface-color: #242424;
+  --ifm-font-color-base: #e5e7eb;
+}
+
+/* Global Transitions */
+html {
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: var(--ifm-transition-fast);
+  transition-timing-function: ease;
 }
 
 /* Typography & Layout */
 body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -56,22 +78,23 @@ h6 {
 
 /* Navbar Premium Look */
 .navbar {
-  backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: none;
+  backdrop-filter: blur(12px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 102, 255, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme='dark'] .navbar {
-  background-color: rgba(15, 23, 42, 0.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(26, 26, 26, 0.95);
+  border-bottom: 1px solid rgba(0, 196, 255, 0.1);
 }
 
 .navbar__title {
   font-weight: 700;
-  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-cyan) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Hero Section */

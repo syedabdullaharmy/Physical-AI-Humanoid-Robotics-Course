@@ -15,59 +15,24 @@
 const sidebars = {
   // Main tutorial sidebar with nested collapsible categories
   tutorialSidebar: [
-    'intro',
+    'setup',
     {
       type: 'category',
-      label: 'Setup Guides',
+      label: 'Module 1: ROS 2 Foundations',
       collapsible: true,
       collapsed: false,
       items: [
-        'setup/workstation',
-        'setup/edge-kit',
-        'setup/cloud',
+        'module-1-ros2/introduction',
       ],
     },
     {
       type: 'category',
-      label: 'Module 1: ROS 2 (Weeks 3-5)',
+      label: 'Module 1: ROS 2 Foundations',
       collapsible: true,
       collapsed: false,
       items: [
-        'module-1-ros2/index',
-        'module-1-ros2/chapter-1-intro-ros2',
-        'module-1-ros2/chapter-2-nodes-topics',
-        'module-1-ros2/chapter-3-services-actions-parameters',
-        'module-1-ros2/chapter-4-urdf-robot-modeling',
-        'module-1-ros2/chapter-5-launch-files-packages',
+        'module-1-ros2/introduction',
       ],
-    },
-    {
-      type: 'category',
-      label: 'Module 2: Digital Twin (Weeks 6-7)',
-      collapsible: true,
-      collapsed: true,
-      items: ['module-2-digital-twin/index'],
-    },
-    {
-      type: 'category',
-      label: 'Module 3: NVIDIA Isaac (Weeks 8-10)',
-      collapsible: true,
-      collapsed: true,
-      items: ['module-3-isaac/index'],
-    },
-    {
-      type: 'category',
-      label: 'Module 4: VLA & Humanoids (Weeks 11-13)',
-      collapsible: true,
-      collapsed: true,
-      items: ['module-4-vla-humanoids/index'],
-    },
-    {
-      type: 'category',
-      label: 'References',
-      collapsible: true,
-      collapsed: true,
-      items: ['references/glossary'],
     },
   ],
 };

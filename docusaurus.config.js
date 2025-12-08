@@ -6,6 +6,11 @@
 
 import { themes as prismThemes } from 'prism-react-renderer';
 
+// Environment detection
+const isDev = process.env.NODE_ENV === 'development';
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const isVercel = process.env.VERCEL === '1';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Physical AI & Humanoid Robotics',
@@ -14,21 +19,27 @@ const config = {
 
   customFields: {
     // Pass API URL to client-side code
-    REACT_APP_API_URL: process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000',
+    REACT_APP_API_URL: process.env.REACT_APP_API_URL ||
+      (isDev ? 'http://127.0.0.1:8000' : 'https://your-backend.railway.app'),
   },
+
   // Set the production url of your site here
-  url: process.env.URL || 'https://your-site-name.netlify.app',
+  url: isGitHubPages
+    ? 'https://syedabdullaharmy.github.io'
+    : (isVercel
+      ? (process.env.VERCEL_URL || 'https://your-site.vercel.app')
+      : (process.env.URL || 'https://your-site-name.netlify.app')),
+
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For Netlify deployment, this is usually just '/'
-  baseUrl: '/',
+  baseUrl: isGitHubPages ? '/Physical-AI-Humanoid-Robotics-Course/' : '/',
 
   // GitHub pages deployment config (kept for reference)
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'syedabdullaharmy', // Usually your GitHub org/user name.
   projectName: 'Physical-AI-Humanoid-Robotics-Course', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  onBrokenLinks: isDev ? 'warn' : 'throw',
+  onBrokenMarkdownLinks: isDev ? 'warn' : 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -92,11 +103,11 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/docs/intro',
+                to: '/',
               },
               {
-                label: 'Setup Guides',
-                to: '/docs/setup/workstation',
+                label: 'Setup Guide',
+                to: '/docs/setup',
               },
             ],
           },
@@ -104,8 +115,8 @@ const config = {
             title: 'Resources',
             items: [
               {
-                label: 'Glossary',
-                to: '/docs/references/glossary',
+                label: 'Module 1: ROS 2',
+                to: '/docs/module-1-ros2/introduction',
               },
             ],
           },
