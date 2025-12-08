@@ -380,6 +380,79 @@
   background: #B91C1C;
 }
 
+/* Selected Text Banner */
+.selectedTextBanner {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 196, 255, 0.1) 100%);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 12px 20px;
+  animation: slideIn 0.3s ease;
+}
+
+.selectedTextContent {
+  margin-bottom: 8px;
+}
+
+.selectedTextContent strong {
+  color: var(--ifm-color-primary);
+  font-size: 13px;
+}
+
+.selectedTextPreview {
+  margin: 6px 0 0 0;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .selectedTextPreview {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--ifm-color-emphasis-200);
+}
+
+.selectedTextActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.askAboutButton {
+  background: linear-gradient(135deg, #0066FF 0%, #00C4FF 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.askAboutButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+}
+
+.clearSelectionButton {
+  background: transparent;
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  color: var(--ifm-color-primary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clearSelectionButton:hover {
+  background: rgba(0, 102, 255, 0.1);
+}
+
+
 .chatInput button:disabled {
   opacity: 0.5;
   cursor: not-allowed;

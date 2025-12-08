@@ -276,6 +276,35 @@ export default function ChatWidget() {
                         </div>
                     )}
 
+                    {/* Selected Text Banner */}
+                    {selectedText && (
+                        <div className={styles.selectedTextBanner}>
+                            <div className={styles.selectedTextContent}>
+                                <strong>📝 Selected Text:</strong>
+                                <p className={styles.selectedTextPreview}>
+                                    "{selectedText.substring(0, 100)}{selectedText.length > 100 ? '...' : ''}"
+                                </p>
+                            </div>
+                            <div className={styles.selectedTextActions}>
+                                <button
+                                    className={styles.askAboutButton}
+                                    onClick={() => {
+                                        setInput(`Explain this: "${selectedText}"`);
+                                        setSelectedText('');
+                                    }}
+                                >
+                                    💬 Ask About This
+                                </button>
+                                <button
+                                    className={styles.clearSelectionButton}
+                                    onClick={() => setSelectedText('')}
+                                >
+                                    ×
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
                     {/* Messages */}
                     <div className={styles.chatMessages}>
                         {messages.length === 0 && (
