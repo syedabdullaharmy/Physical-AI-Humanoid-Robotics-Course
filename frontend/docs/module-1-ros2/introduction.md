@@ -213,7 +213,7 @@ ros2 run package_name node_name
 
 ## Next Steps
 
-Ready to dive deeper? More chapters coming soon!
+Ready to dive deeper? Continue to [Creating Your First Node](/docs/module-1-ros2/first-node)!
 
 ---
 

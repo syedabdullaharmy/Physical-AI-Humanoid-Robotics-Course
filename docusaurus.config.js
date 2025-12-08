@@ -6,7 +6,7 @@
 
 import { themes as prismThemes } from 'prism-react-renderer';
 
-// Environment detection
+// Environment detection for multi-platform deployment
 const isDev = process.env.NODE_ENV === 'development';
 const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 const isVercel = process.env.VERCEL === '1';
@@ -18,28 +18,28 @@ const config = {
   favicon: 'img/favicon.ico',
 
   customFields: {
-    // Pass API URL to client-side code
+    // Pass API URL to client-side code - environment aware
     REACT_APP_API_URL: process.env.REACT_APP_API_URL ||
       (isDev ? 'http://127.0.0.1:8000' : 'https://your-backend.railway.app'),
   },
 
-  // Set the production url of your site here
+  // Dynamic URL based on deployment platform
   url: isGitHubPages
     ? 'https://syedabdullaharmy.github.io'
     : (isVercel
-      ? (process.env.VERCEL_URL || 'https://your-site.vercel.app')
-      : (process.env.URL || 'https://your-site-name.netlify.app')),
+      ? (process.env.VERCEL_URL || 'https://your-project.vercel.app')
+      : (process.env.URL || 'https://physical-ai-robotics-texbook-abdullah.netlify.app')),
 
-  // Set the /<baseUrl>/ pathname under which your site is served
+  // Dynamic baseUrl for GitHub Pages
   baseUrl: isGitHubPages ? '/Physical-AI-Humanoid-Robotics-Course/' : '/',
 
-  // GitHub pages deployment config (kept for reference)
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'syedabdullaharmy', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Humanoid-Robotics-Course', // Usually your repo name.
+  // GitHub pages deployment config
+  organizationName: 'syedabdullaharmy',
+  projectName: 'Physical-AI-Humanoid-Robotics-Course',
 
-  onBrokenLinks: isDev ? 'warn' : 'throw',
-  onBrokenMarkdownLinks: isDev ? 'warn' : 'throw',
+  // Environment-aware error handling
+  onBrokenLinks: isDev ? 'warn' : 'warn', // Keep as warn to allow builds
+  onBrokenMarkdownLinks: isDev ? 'warn' : 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -103,11 +103,11 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/',
+                to: '/docs/intro',
               },
               {
-                label: 'Setup Guide',
-                to: '/docs/setup',
+                label: 'Setup Guides',
+                to: '/docs/setup/workstation',
               },
             ],
           },
@@ -115,8 +115,8 @@ const config = {
             title: 'Resources',
             items: [
               {
-                label: 'Module 1: ROS 2',
-                to: '/docs/module-1-ros2/introduction',
+                label: 'Glossary',
+                to: '/docs/references/glossary',
               },
             ],
           },

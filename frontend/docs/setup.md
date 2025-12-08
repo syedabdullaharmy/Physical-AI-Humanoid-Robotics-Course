@@ -236,5 +236,5 @@ Once your environment is set up, proceed to [Module 1: ROS 2 Fundamentals](/docs
 ## Need Help?
 
 - Use the AI chatbot (bottom-right corner)
+- Check the [Troubleshooting Guide](/docs/references/troubleshooting)
 - Visit [Panaversity Community](https://panaversity.org)
-
