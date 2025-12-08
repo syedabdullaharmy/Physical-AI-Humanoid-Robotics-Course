@@ -1,0 +1,41 @@
+.chapterActions {
+    margin: 24px 0;
+    padding: 20px;
+    background: var(--ifm-color-emphasis-100);
+    border-radius: 12px;
+    border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .chapterActions {
+    background: var(--ifm-background-surface-color);
+    border-color: var(--ifm-color-emphasis-300);
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.contentPreview {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--ifm-color-primary);
+}
+
+.modifiedContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .modifiedContent {
+    background: var(--ifm-color-emphasis-100);
+}
+
+@media (max-width: 768px) {
+    .buttonsContainer {
+        flex-direction: column;
+    }
+}
