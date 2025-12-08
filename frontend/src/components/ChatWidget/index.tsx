@@ -37,6 +37,7 @@ export default function ChatWidget() {
     const [error, setError] = useState<ErrorState | null>(null);
     const [showSuggestions, setShowSuggestions] = useState(true);
     const [copyFeedback, setCopyFeedback] = useState<number | null>(null);
+    const [selectedText, setSelectedText] = useState<string>('');
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -46,6 +47,26 @@ export default function ChatWidget() {
     useEffect(() => {
         scrollToBottom();
     }, [messages]);
+
+    // Text selection handler
+    useEffect(() => {
+        const handleTextSelection = () => {
+            const selection = window.getSelection();
+            const text = selection?.toString().trim();
+            if (text && text.length > 10) { // Minimum 10 characters
+                setSelectedText(text);
+                setIsOpen(true); // Auto-open chat
+            }
+        };
+
+        document.addEventListener('mouseup', handleTextSelection);
+        document.addEventListener('touchend', handleTextSelection);
+
+        return () => {
+            document.removeEventListener('mouseup', handleTextSelection);
+            document.removeEventListener('touchend', handleTextSelection);
+        };
+    }, []);
 
     // Load chat history from localStorage on mount
     useEffect(() => {
