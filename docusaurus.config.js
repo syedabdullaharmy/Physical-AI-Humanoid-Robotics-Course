@@ -33,6 +33,9 @@ const config = {
   // Dynamic baseUrl for GitHub Pages
   baseUrl: isGitHubPages ? '/Physical-AI-Humanoid-Robotics-Course/' : '/',
 
+  // Recommended for GitHub Pages to prevent 404s
+  trailingSlash: false,
+
   // GitHub pages deployment config
   organizationName: 'syedabdullaharmy',
   projectName: 'Physical-AI-Humanoid-Robotics-Course',
