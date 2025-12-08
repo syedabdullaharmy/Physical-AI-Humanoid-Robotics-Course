@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.0.0",
+  "homepage": "https://syedabdullaharmy.github.io/Physical-AI-Humanoid-Robotics-Course/",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
