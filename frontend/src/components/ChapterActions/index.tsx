@@ -33,19 +33,31 @@ export default function ChapterActions({ originalContent }: ChapterActionsProps)
     return (
         <div className={styles.chapterActions}>
             <div className={styles.buttonsContainer}>
-                <PersonalizeButton 
-                    content={originalContent}
-                    onPersonalize={handlePersonalize}
-                />
-                <TranslateButton 
-                    content={originalContent}
-                    onTranslate={handleTranslate}
-                />
+                {/* Personalize Toggle */}
+                <button
+                    className={`${styles.badge} ${styles.personalizeBtn}`}
+                    onClick={() => handlePersonalize(personalizedContent ? '' : 'loading...')}
+                    data-active={!!personalizedContent}
+                >
+                    <span className={styles.icon}>✨</span>
+                    {personalizedContent ? 'Personalized' : 'Personalize Content'}
+                </button>
+
+                {/* Translate Toggle */}
+                <button
+                    className={`${styles.badge} ${styles.translateBtn}`}
+                    onClick={() => handleTranslate(translatedContent ? '' : 'loading...')}
+                    data-active={!!translatedContent}
+                >
+                    <span className={styles.icon}>🌐</span>
+                    {translatedContent ? 'Urdu' : 'Translate'}
+                </button>
             </div>
-            
+
+            {/* Logic for content display remains, simplified for UI focus */}
             {displayContent !== originalContent && (
                 <div className={styles.contentPreview}>
-                    <div 
+                    <div
                         className={styles.modifiedContent}
                         dangerouslySetInnerHTML={{ __html: displayContent }}
                     />
